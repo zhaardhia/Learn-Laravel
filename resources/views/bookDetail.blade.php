@@ -6,11 +6,11 @@
         <h2>Book Details</h2>
         <hr>
         <article>
-            <h5>Title: {{ $book["title"] }}</h5>
-            <h5>Author: {{ $book["author"] }}</h5>
-            <h5>Publisher: {{ $book["publisher"] }}</h5>
-            <h5>Year: {{ $book["year"] }}</h5>
-            <h5>Desc: {{ $book["desc"] }}</h5>
+            <p>Title: {{ $book["title"] }}</p>
+            <p>Author: {{ $book["author"] }}</p>
+            <p>Publisher: {{ $book["publisher"] }}</p>
+            <p>Year: {{ $book["year"] }}</p>
+            <p>Desc: {{ $book["desc"] }}</p>
         </article>
         <a href="/home">Back To Menu</a>
     </div>
