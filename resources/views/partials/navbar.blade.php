@@ -12,9 +12,16 @@
             <li class="nav-item">
                 <a class="nav-link {{ ($title === "Home") ? 'active' : '' }}" aria-current="page" href="/home">Home</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link {{ ($title === "") ? 'active' : '' }}" href="#">Category</a>
-            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Category
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="#">Fiction</a></li>
+                  <li><a class="dropdown-item" href="#">Science</a></li>
+                  <li><a class="dropdown-item" href="#">Computer</a></li>
+                </ul>
+              </li>
             <li class="nav-item">
                 <a class="nav-link {{ ($title === "Contact") ? 'active' : '' }}" aria-current="page" href="/contact">Contact</a>
             </li>
