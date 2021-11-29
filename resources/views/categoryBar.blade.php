@@ -1,9 +1,10 @@
+
 <div>
     <h2>Category</h2>
     <hr>
     <div class="d-flex flex-column">
-        <a href="#">Fiction</a>
-        <a href="#">Science</a>
-        <a href="#">Computer</a>
+        @foreach ($categories as $category)
+            <a href="/categories/{{ $category->id }}">{{ $category->category }}</a>
+        @endforeach
     </div>
 </div>

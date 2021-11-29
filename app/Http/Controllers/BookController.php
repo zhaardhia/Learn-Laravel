@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreBookRequest;
 use App\Http\Requests\UpdateBookRequest;
 use App\Models\Book;
+use App\Models\Detail;
+use App\Models\Category;
+
 
 class BookController extends Controller
 {
@@ -17,7 +20,8 @@ class BookController extends Controller
     {
         return view('home', [
             "title" => "Home",
-            "books" => Book::all()
+            "books" => Book::all(),
+            "categories" => Category::all()
         ]);
     }
 
@@ -50,9 +54,20 @@ class BookController extends Controller
      */
     public function show($slug)
     {
+        $selectedDetail = Detail::where('slug', '=', $slug)
+            ->get();
+        $book = Book::where('id', '=', $selectedDetail[0]->book_id)
+            ->get();
         return view('bookDetail', [
-            "title" => "Apa kek",
-            "book" => Book::find($slug)
+            "title" => $book[0]->title,
+            "categories" => Category::all(),
+            "detail" => $selectedDetail[0]
+        ]);
+    }
+    public function contact(){
+        return view('contact', [
+            "title" => "Contact",
+            "categories" => Category::all()
         ]);
     }
 

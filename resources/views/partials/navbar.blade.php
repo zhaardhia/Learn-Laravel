@@ -17,9 +17,9 @@
                   Category
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <li><a class="dropdown-item" href="#">Fiction</a></li>
-                  <li><a class="dropdown-item" href="#">Science</a></li>
-                  <li><a class="dropdown-item" href="#">Computer</a></li>
+                    @foreach ($categories as $category)
+                        <li><a class="dropdown-item" href="/categories/{{ $category->id }}">{{ $category->category }}</a></li>
+                    @endforeach
                 </ul>
               </li>
             <li class="nav-item">

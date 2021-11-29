@@ -1,4 +1,4 @@
-
+{{-- @dd($book) --}}
 @extends('layouts.main')
 
 @section('container')
@@ -6,11 +6,13 @@
         <h2>Book Details</h2>
         <hr>
         <article>
-            <p>Title: {{ $book["title"] }}</p>
-            <p>Author: {{ $book["author"] }}</p>
-            <p>Publisher: {{ $book["publisher"] }}</p>
-            <p>Year: {{ $book["year"] }}</p>
-            <p>Desc: {{ $book["desc"] }}</p>
+            
+            <p>Author: {{ $detail->author }}</p>
+            <p>Title: {{ $title }}</p>
+            <p>Author: {{ $detail->author }}</p>
+            <p>Publisher: {{ $detail->publisher }}</p>
+            <p>Year: {{ $detail->year }}</p>
+            <p>Desc: {{ $detail->description }}</p>
         </article>
         <a href="/home">Back To Menu</a>
     </div>
