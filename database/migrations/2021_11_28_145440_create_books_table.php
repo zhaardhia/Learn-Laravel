@@ -17,6 +17,7 @@ class CreateBooksTable extends Migration
             $table->id();
             $table->foreignId('category_id');
             $table->string('title');
+            $table->timestamps();
         });
     }
 
@@ -30,3 +31,5 @@ class CreateBooksTable extends Migration
         Schema::dropIfExists('books');
     }
 }
+
+
