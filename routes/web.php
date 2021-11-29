@@ -26,16 +26,9 @@ Route::get('/', function () {
 });
 
 Route::get('/home', [BookController::class, 'index']);
-// Route::get('/home', [CategoryController::class, 'index']);
 
-Route::get('/book/{slug}', [BookController::class, 'show']);
-// Route::get('/categories/{category:slug}', function(Category $category){
-//     return view('category', [
-//         'title' => $category->category,
-//         'books' => $category->books,
-//         'category' => $category->category
-//     ]);
-// });
+Route::get('/book/{id}', [BookController::class, 'show']);
+
 Route::get('/categories/{id}', [CategoryController::class, 'show']);
 
 Route::get('/contact', [BookController::class, 'contact']);

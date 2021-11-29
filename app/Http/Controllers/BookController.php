@@ -52,9 +52,9 @@ class BookController extends Controller
      * @param  \App\Models\Book  $book
      * @return \Illuminate\Http\Response
      */
-    public function show($slug)
+    public function show($id)
     {
-        $selectedDetail = Detail::where('slug', '=', $slug)
+        $selectedDetail = Detail::where('id', '=', $id)
             ->get();
         $book = Book::where('id', '=', $selectedDetail[0]->book_id)
             ->get();

@@ -18,7 +18,6 @@ class CreateDetailsTable extends Migration
             $table->foreignId('book_id');
             $table->string('author');
             $table->string('publisher');
-            $table->string('slug')->unique();
             $table->integer('year');
             $table->longText('description');
             $table->timestamps();

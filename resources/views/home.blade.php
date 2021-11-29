@@ -16,12 +16,14 @@
                 <tbody>
                 @foreach($books as $book)
                     <tr >
-                        <td >
-                            {{ $book->title }}
-                            <a href="/book/{{ $book->detail->slug }}"><h6>Details</h6></a>
-                        </td>
-                        <td>{{ $book->detail->author }}</td>
-                        <td>{{ $book->category->category }}</td>
+                        {{-- {{ ($book != NULL) ?  }} --}}
+                            
+                            <td >
+                                {{ $book->title }}
+                                <a href="/book/{{ $book->detail->id }}"><h6>Details</h6></a>
+                            </td>
+                            <td>{{ $book->detail->author }}</td>
+                            <td>{{ $book->category->category }}</td>
                     </tr>
                 @endforeach
                 </tbody>
