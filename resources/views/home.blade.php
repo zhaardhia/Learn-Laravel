@@ -10,42 +10,20 @@
                 <tr>
                     <th>Title</th>
                     <th>Author</th>
-                    <th>Category</th>
                 </tr>
                 </thead>
                 <tbody>
-                @foreach($books as $book)
-                    <tr >
-                        {{-- {{ ($book != NULL) ?  }} --}}
-                            
-                            <td >
-                                {{ $book->title }}
-                                <a href="/book/{{ $book->detail->id }}"><h6>Details</h6></a>
-                            </td>
-                            <td>{{ $book->detail->author }}</td>
-                            <td>{{ $book->category->category }}</td>
-                    </tr>
-                @endforeach
                 @forelse ($books as $book)
                     <tr >
-                        {{-- {{ ($book != NULL) ?  }} --}}
-                            
-                            <td >
-                                {{ $book->title }}
-                                <a href="/book/{{ $book->detail->id }}"><h6>Details</h6></a>
-                            </td>
-                            <td>{{ $book->detail->author }}</td>
-                            <td>{{ $book->category->category }}</td>
+                        <td >
+                            {{ $book->title }}
+                            <a href="/book/{{ $book->detail->id }}"><h6 style="">Details</h6></a>
+                        </td>
+                        <td>{{ $book->detail->author }}</td>
+                        
                     </tr>
                 @empty
                     <tr >
-                            
-                            {{-- <td >
-                                {{ $book->title }}
-                                <a href="/book/{{ $book->detail->id }}"><h6>Details</h6></a>
-                            </td>
-                            <td>{{ $book->detail->author }}</td>
-                            <td>{{ $book->category->category }}</td> --}}
                         <td>No Data...</td>
                     </tr>
                 @endforelse

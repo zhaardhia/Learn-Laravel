@@ -19,12 +19,8 @@ use App\Models\Category;
 |
 */
 
-Route::get('/', function () {
-    return view('layouts/main', [
-        "title" => "Home",
-    ]);
-});
 
+Route::get('/', [BookController::class, 'index']);
 Route::get('/home', [BookController::class, 'index']);
 
 Route::get('/book/{id}', [BookController::class, 'show']);
